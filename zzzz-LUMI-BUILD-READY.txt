@@ -1,0 +1,24 @@
+LUMI STRONG BOOTSTRAP V1
+Version: 3.9.0-bootstrap
+VersionCode: 247
+Build goal: Last APK Factory-required routine install.
+
+This source builds:
+1. Lumi release APK (com.distressedelk.lumi, code 247)
+2. Lumi Guardian companion (com.distressedelk.lumi.guardian, code 2)
+
+The workflow builds Guardian first, embeds the signed Guardian APK inside Lumi, then builds and verifies the release-signed Lumi APK.
+
+Verify-fix: apksigner SHA-256 output matched in canonical unseparated hex form.
+Guardian-path fix: embedded Guardian now stages inside files/lumi_updates/guardian_bootstrap, which is already covered by Lumi's FileProvider root.
+
+Certification-probe fix: Guardian code 2 invokes Lumi active certification; Lumi runs a real local Fast Brain constrained-response probe and clears stale prompt-mismatch quarantine only on probe success.
+
+Code247 diagnostic fix: certification disables Qwen3 thinking for the probe, increases the completion budget, and distinguishes raw-engine output from sanitized visible output before clearing quarantine.
+
+Code249 AI initiation fix applied: 4.0.2-ai-init-fix-r1 / versionCode 249.
+
+
+Code257 AI state reset repair: 4.0.10-ai-state-reset-r1 / versionCode 257.
+Clears stale provider/status preferences, bypasses local-model guessing for AI status, and uses a fresh Code257 setup prompt flag.
+Guardian remains 1.3 / versionCode 4.

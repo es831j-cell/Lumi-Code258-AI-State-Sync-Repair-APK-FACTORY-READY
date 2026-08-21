@@ -1,0 +1,33 @@
+LUMI 1.0 FULL LAUNCH SOURCE MANIFEST
+Date: 2026-08-20
+Lumi package: com.distressedelk.lumi
+Lumi version: 4.0.2-ai-init-fix-r1
+Lumi versionCode: 249
+Guardian package: com.distressedelk.lumi.guardian
+Guardian version: 1.2-lumi-1.0
+Guardian versionCode: 3
+
+Launch-critical additions over the Code247 Strong Bootstrap base:
+- Persistent LumiMemoryVault (SQLite + Android-Keystore encrypted values)
+- Legacy memory/transcript migration and launch history seed
+- Portable backup/restore includes Memory Vault
+- Guardian recovery checkpoint includes encrypted Memory Vault
+- OpenAI Responses reasoning client with local function tool loop
+- Native allow-listed maintenance tool host (directMaintenanceHostV1)
+- Administrator/unlocked-device/current-approval write gate
+- HTTPS-only signed remote/AI update path
+- Guardian checkpoint -> apply -> certify -> rollback chain
+- Direct Maintenance Bridge policy/config assets
+- OpenAI Realtime/WebRTC-ready voice architecture boundary with Android speech/TTS fallback
+- Guardian control provider protected by signature permission
+- GitHub Actions release workflow builds Guardian, embeds it, builds Lumi, verifies signatures/identities, and emits Lumi-1.0-FULL-LAUNCH-Code247.apk
+
+See LUMI-1.0-FULL-LAUNCH-README.txt and LUMI-1.0-SOURCE-AUDIT-GREEN.txt.
+
+
+Code249 AI initiation fix additions:
+- Immediate AI connection refresh after provider configuration changes.
+- Foreground stale-state refresh.
+- Voice intent "how's your AI" now reports real connection-manager state.
+- Generic local fallback no longer falsely says to connect a booster when one is already configured.
+- Manual "Recheck AI connection now" control in Integration Center.
